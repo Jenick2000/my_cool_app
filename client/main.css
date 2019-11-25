@@ -1,0 +1,375 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+body {
+padding: 60px 0px;
+background-color: rgb(220, 220, 220);
+}
+
+.event-list {
+list-style: none;
+font-family: 'Lato', sans-serif;
+margin: 0px;
+padding: 0px;
+}
+.event-list > li {
+background-color: rgb(255, 255, 255);
+box-shadow: 0px 0px 5px rgb(51, 51, 51);
+box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+padding: 0px;
+margin: 0px 0px 20px;
+}
+.event-list > li > time {
+display: inline-block;
+width: 100%;
+color: rgb(255, 255, 255);
+background-color: rgb(197, 44, 102);
+padding: 5px;
+text-align: center;
+text-transform: uppercase;
+}
+.event-list > li:nth-child(even) > time {
+background-color: rgb(165, 82, 167);
+}
+.event-list > li > time > span {
+display: none;
+}
+.event-list > li > time > .day {
+display: block;
+font-size: 56pt;
+font-weight: 100;
+line-height: 1;
+}
+.event-list > li time > .month {
+display: block;
+font-size: 24pt;
+font-weight: 900;
+line-height: 1;
+}
+.event-list > li > img {
+width: 100%;
+}
+.event-list > li > .info {
+padding-top: 5px;
+text-align: center;
+}
+.event-list > li > .info > .title {
+font-size: 17pt;
+font-weight: 700;
+margin: 0px;
+}
+.event-list > li > .info > .desc {
+font-size: 13pt;
+font-weight: 300;
+margin: 0px;
+}
+.event-list > li > .info > ul,
+.event-list > li > .social > ul {
+display: table;
+list-style: none;
+margin: 10px 0px 0px;
+padding: 0px;
+width: 100%;
+text-align: center;
+}
+.event-list > li > .social > ul {
+margin: 0px;
+}
+.event-list > li > .info > ul > li,
+.event-list > li > .social > ul > li {
+display: table-cell;
+cursor: pointer;
+color: rgb(30, 30, 30);
+font-size: 11pt;
+font-weight: 300;
+    padding: 3px 0px;
+}
+.event-list > li > .info > ul > li > a {
+display: block;
+width: 100%;
+color: rgb(30, 30, 30);
+text-decoration: none;
+} 
+.event-list > li > .social > ul > li {    
+    padding: 0px;
+}
+.event-list > li > .social > ul > li > a {
+    padding: 3px 0px;
+} 
+.event-list > li > .info > ul > li:hover,
+.event-list > li > .social > ul > li:hover {
+color: rgb(30, 30, 30);
+background-color: rgb(200, 200, 200);
+}
+.facebook a,
+.twitter a,
+.google-plus a {
+display: block;
+width: 100%;
+color: rgb(75, 110, 168) !important;
+}
+.twitter a {
+color: rgb(79, 213, 248) !important;
+}
+.google-plus a {
+color: rgb(221, 75, 57) !important;
+}
+.facebook:hover a {
+color: rgb(255, 255, 255) !important;
+background-color: rgb(75, 110, 168) !important;
+}
+.twitter:hover a {
+color: rgb(255, 255, 255) !important;
+background-color: rgb(79, 213, 248) !important;
+}
+.google-plus:hover a {
+color: rgb(255, 255, 255) !important;
+background-color: rgb(221, 75, 57) !important;
+}
+
+@media (min-width: 768px) {
+.event-list > li {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 0px;
+}
+.event-list > li > time,
+.event-list > li > img  {
+  display: inline-block;
+}
+.event-list > li > time,
+.event-list > li > img {
+  width: 120px;
+  float: left;
+}
+.event-list > li > .info {
+  background-color: rgb(245, 245, 245);
+  overflow: hidden;
+}
+.event-list > li > time,
+.event-list > li > img {
+  width: 120px;
+  height: 120px;
+  padding: 0px;
+  margin: 0px;
+}
+.event-list > li > .info {
+  position: relative;
+  height: 120px;
+  text-align: left;
+  padding-right: 40px;
+}	
+.event-list > li > .info > .title, 
+.event-list > li > .info > .desc {
+  padding: 0px 10px;
+}
+.event-list > li > .info > ul {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.event-list > li > .social {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  width: 40px;
+}
+    .event-list > li > .social > ul {
+        border-left: 1px solid rgb(230, 230, 230);
+    }
+.event-list > li > .social > ul > li {			
+  display: block;
+        padding: 0px;
+}
+.event-list > li > .social > ul > li > a {
+  display: block;
+  width: 40px;
+  padding: 10px 0px 9px;
+}
+}
+.context-dark, .bg-gray-dark, .bg-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+  color: #ffffff;
+}
+.nav-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: #4d6de6;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .22s ease;
+}
+/* banner */
+.seo-services-banner-main {
+  background: #d9eef9;
+}
+.seo-services-banner-text{
+  background: #3fc8d0;
+}
+.seo-services-banner-text-box{
+  position: relative;
+  left: -217px;
+  border: 3px solid #fff;
+  padding: 31px;
+  margin: 43px;
+  box-shadow: 7px 8px 0px -1px #08656b;
+}
+.seo-services-banner-left-corner{
+  width: 200px;
+  height: 124px;
+  background: #3fc8d0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.seo-services-banner-left-corner1{
+  width: 100px;
+  height: 62px;
+  background: #89e4ea;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.seo-services-banner-bottom-thin{
+  width: 26px;
+  height: 98px;
+  background: #00c444;
+  border: 8px solid #fff;
+  position: absolute;
+  bottom: -46px;
+  right: 75px;
+}
+.seo-service-left-text{
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+/* modal */
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 800px!important;
+}
+#login-dropdown-list {
+  position: absolute;
+  top: 45px;
+  left: -200px;
+}
+}
+@media (max-width: 576px){
+  .checkmark{
+    top:30px!important;
+    left:47%!important;
+  }
+  .event-list li time{
+    height: 87px;
+  }
+}
+.modal-dialog{
+  background-color: #f4f5f7;
+}
+/* checkbox */
+.box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 46px;
+    left: 36%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.box input:checked ~ .checkmark {
+  background-color: rgb(159, 228, 55);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.box .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

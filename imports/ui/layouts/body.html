@@ -1,0 +1,213 @@
+  <body>
+    
+      
+  </body>
+   
+  
+
+  
+  <template name="ApplicationLayout">
+    <div class="container-fluid">
+      <div class="seo-services-banner-main">
+          <div class="seo-services-banner-left-corner"></div>
+          <div class="seo-services-banner-left-corner1"></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div>
+                          <img src="https://www.hummingwebians.com/public/images/seo-rocket.png" alt="Seo Services">
+                      </div>
+                  </div>
+                  <div class="col-md-6 seo-services-banner-text py-50">
+                      <div class="seo-services-banner-text-box">
+                          <h1>
+                              Event scheduling tool is easy
+                          </h1>
+                          <p>The easy and effective way to have better positioning and more visitors on your website.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+          <a class="navbar-brand" href="/">Jenick'JK</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/lists">Lists Event</a>
+              </li>
+              
+              
+            </ul>
+              <span>{{> loginButtons}} </span>
+          </div>
+      </nav>
+    </div>  
+    <div class="container">
+        
+    {{#if currentUser}}
+    <aside>
+      {{> yield "aside"}}
+    </aside>
+  
+    <article>
+      {{> yield}}
+    </article>
+    {{else}}
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+          <h3 style="color: orange;margin: 50px 0;"> Signin to see your events </h3>
+      </div>
+      <div class="col-lg-4"></div>
+    
+     </div>
+    {{/if}}
+    </div>
+    <div>
+        {{> yield "footer"}}
+    </div>
+  </template>
+
+  <template name="Post">
+     <h3>Todo list <b style="color:orange">{{incompleteCount}}</b> </h3>
+    <div class="row">
+			<div class="col-lg-12">
+				<ul class="event-list">
+            {{#each tasks}}
+            <li style="cursor: pointer;" class="{{#if checked}}checked{{/if}}" >
+              {{#if checked}}
+                <time datetime="2014-07-20"  style="background-color: rgb(3, 199, 45)">
+                    <label class="box">
+                        <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+                        <span class="checkmark"></span>
+                      </label>
+                </time>
+                {{else}}
+                <time datetime="2014-07-20"  >
+                    <label class="box">
+                        <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+                        <span class="checkmark"></span>
+                      </label>
+                </time>
+                {{/if}}
+                <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+                <div class="info">
+                  <h2 class="title">{{title}}</h2> 
+                  <p class="desc">{{desc}} </p>
+                  
+                </div>
+                
+                <div class="social">
+                  <ul>
+                   
+                    <li class="google-plus" style="width:33%;"><a class="delete"  ><i class="fa fa-trash-o" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+            {{/each}}
+				
+          
+          </ul>
+          </div>
+    </div>
+ 
+    </template>
+
+    <template name="PostFooter">
+     <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Jenick'JK</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Q.BT TP.HCM</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">jenick2000@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">https://jenickchat.herokuapp.com</a> <span>or</span> <a href="tel:#">http://saigontimes.herokuapp.com</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+      </footer>
+    </template>
+    
+    <template name="PostAside">
+      <!-- Button trigger modal -->
+  <button type="button" style="margin: 50px;" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <i class="fa fa-calendar-plus-o"></i> Add Event in monthly 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="new-event">
+                
+                <div class="form-group">
+                    <label for="title">Title event</label>
+                   <input type="text" required  class="form-control" placeholder="title" name="title">
+                   </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                   <input type="text" required class="form-control" name="desc"  placeholder="Enter desc">
+                   </div>
+                   <button type="submit" class="btn btn-outline-warning">Add</button>
+                  </form>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    </template>
+   
