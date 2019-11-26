@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 body {
 padding: 60px 0px;
@@ -373,3 +374,29 @@ ul, ol {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/* input design */
+input[type="text"]{
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+ 
+}
+
+:focus{outline: none;}
+
+.col-3{float: left; width: 27.33%; position: relative;} /* necessary to give position: relative to parent. */
+
+.effect-2 
+{border: 0; font-size: 25px;
+  text-align: center; padding: 7px 0; font-family: 'Damion', cursive; border-bottom: 1px solid #ccc;background-color: rgb(245, 245, 245);}
+.effect-2 ~ .focus-border
+{position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.effect-2:focus ~ .focus-border{width: 100%; transition: 0.4s; left: 0;}
+
+.effect-3
+{border: 0; font-size: 18px;
+  text-align: center; padding: 7px 0;background-color: rgb(245, 245, 245);}
+.effect-3 ~ .focus-border
+{position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.effect-3:focus ~ .focus-border{width: 100%; transition: 0.4s; left: 0;}

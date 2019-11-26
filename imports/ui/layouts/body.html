@@ -100,9 +100,38 @@
                 {{/if}}
                 <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
                 <div class="info">
-                  <h2 class="title">{{title}}</h2> 
-                  <p class="desc">{{desc}} </p>
-                  
+        
+                  <form class="edit-event">
+                    <div class="mahi_holder">
+                      <div class="container">
+                       {{#if checked}}
+                       <div class="row">
+                          <div class="col-12">
+                              <input class="effect-2" type="text" name="title" readonly   value="{{title}}">
+                                <span class="focus-border"></span>
+                         </div><br>
+                         <div class="col-12">
+                            <input class="effect-3" type="text" name="desc" readonly  value="{{desc}}">
+                              <span class="focus-border"></span>
+                       </div>
+                      
+                      </div>
+                        {{else}}
+                        <div class="row">
+                            <div class="col-12">
+                                <input class="effect-2" type="text" name="title" required  placeholder="enter Title" value="{{title}}">
+                                  <span class="focus-border"></span>
+                           </div><br>
+                           <div class="col-12">
+                              <input class="effect-3" type="text" name="desc" required placeholder="enter Discription" value="{{desc}}">
+                                <span class="focus-border"></span>
+                         </div>
+                         <input type="submit" class="btn-submit" style="display:none">
+                        </div>
+                        {{/if}}
+                      </div>
+                    </div>    
+                  </form>
                 </div>
                 
                 <div class="social">

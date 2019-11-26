@@ -23,7 +23,16 @@ Template.Post.events({
     if (confirm('Are You Sure?')){
       Tasks.remove(this._id);
    }
-  }
+  },
+  'submit .edit-event'(event){
+    // Prevent default browser form submit
+    event.preventDefault();
+    const target = event.target;
+    const title = target.title.value;
+    const desc = target.desc.value;
+    Tasks.update(this._id,{ $set: {title : title , desc :desc } });
+    
+ },
 });
 Template.PostAside.events({
   'submit .new-event'(event){
